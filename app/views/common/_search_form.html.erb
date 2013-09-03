@@ -1,0 +1,3 @@
+ <%= form_tag "/search", :class => "form-group", :method => :get do %>
+   <input type="text" name="q" class="search-query form-control" value="<%= @query_string %>" placeholder="<%= @query_string ||   "Search" %>" />
+<% end %>
