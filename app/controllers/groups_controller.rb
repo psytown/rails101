@@ -20,13 +20,12 @@ class GroupsController < ApplicationController
        	render :new
        end
 	end
-    private
-    def group_params
-    	params.require(:group).permit(:title, :description)
-    end
+    
+
     
 
     def edit
+        
    	    @group = Group.find(params[:id])
     end
 
@@ -49,9 +48,15 @@ class GroupsController < ApplicationController
    	    redirect_to groups_path
     end
 
+
+
+   private
+    
+    def group_params
+      params.require(:group).permit(:title, :description)
+    end
+
 end
-
-
 
 
 
